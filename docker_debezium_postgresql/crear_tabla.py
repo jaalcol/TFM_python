@@ -10,19 +10,43 @@ db_port = "5432"
 
 # Sentencia SQL para crear la tabla
 create_tables_query = '''
-CREATE TABLE IF NOT EXISTS quotes_price (
+CREATE TABLE IF NOT EXISTS transactions (
     id SERIAL PRIMARY KEY,
-    activity TEXT UNIQUE,
-    type TEXT,
-    price TEXT
+    income FLOAT,
+    name_email_similarity FLOAT,
+    prev_address_months_count FLOAT,
+    current_address_months_count FLOAT,
+    customer_age FLOAT,
+    days_since_request FLOAT,
+    intended_balcon_amount FLOAT,
+    payment_type TEXT,
+    zip_count_4w FLOAT,
+    velocity_6h FLOAT,
+    velocity_24h FLOAT,
+    velocity_4w FLOAT,
+    bank_branch_count_8w FLOAT,
+    date_of_birth_distinct_emails_4w FLOAT,
+    employment_status TEXT,
+    credit_risk_score FLOAT,
+    email_is_free FLOAT,
+    housing_status TEXT,
+    phone_home_valid FLOAT,
+    phone_mobile_valid FLOAT,
+    bank_months_count FLOAT,
+    has_other_cards FLOAT,
+    proposed_credit_limit FLOAT,
+    foreign_request FLOAT,
+    source TEXT,
+    session_length_in_minutes FLOAT,
+    device_os TEXT,
+    keep_alive_session FLOAT,
+    device_distinct_emails_8w FLOAT,
+    device_fraud_count FLOAT,
+    month FLOAT,
+    score FLOAT,
+    probability FLOAT
 );
-CREATE TABLE IF NOT EXISTS quotes_accesibility (
-    id SERIAL PRIMARY KEY,
-    activity TEXT UNIQUE,
-    link TEXT,
-    key TEXT,
-    accessibility float
-);
+
 '''
 
 try:

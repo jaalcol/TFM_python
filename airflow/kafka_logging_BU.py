@@ -41,10 +41,10 @@ def test_kafka_connection(bootstrap_servers, topic):
             auto_offset_reset='latest',
             consumer_timeout_ms=5000  # 5s timeout
         )
-        logger.info(f"✅ Successfully connected to Kafka topic '{topic}'")
+        logger.info(f"Successfully connected to Kafka topic '{topic}'")
         consumer.close()
     except Exception as e:
-        logger.error(f"❌ Failed to connect to Kafka: {e}")
+        logger.error(f"Failed to connect to Kafka: {e}")
         raise e
 
 def main():
@@ -55,10 +55,10 @@ def main():
 
     logger.info("Setting Kafka consumer properties...")
     properties = {
-        'bootstrap.servers': '35.233.66.87:9092'
+        'bootstrap.servers': '34.79.169.157:9092'
     }
     
-    test_kafka_connection('35.233.66.87:9092', 'debezium.public.quotes_accesibility')
+    test_kafka_connection('34.79.169.157:9092', 'debezium.public.quotes_accesibility')
 
     logger.info("Creating Kafka consumer...")
     kafka_consumer = FlinkKafkaConsumer(
