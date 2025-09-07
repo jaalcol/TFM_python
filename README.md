@@ -4,7 +4,6 @@ Repository dedicated to the Python development of the anomaly detection Master's
 
 ## Key Components
 
-- **Airflow**: Orchestration of data pipelines.
 - **Dataflow (Apache Beam)**: Streaming data processing from Kafka.
 - **Dataproc (Apache Spark)**: Batch training of ML models for anomaly detection.
 - **Docker + Debezium + PostgreSQL**: Real-time data ingestion using CDC.
@@ -16,7 +15,6 @@ This repository manages the data flow before Flink inference, allowing reproduci
 ## Technologies
 
 - Python 3.x
-- Apache Airflow
 - Apache Beam / Dataflow
 - Apache Spark
 - Docker & Debezium
