@@ -1,0 +1,55 @@
+# Entornos virtuales
+venv/
+env/
+.venv/
+tfm_env_python312/
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# Archivos de configuración de IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Logs
+*.log
+
+# Archivos de dependencias generados
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Docker
+*.pid
+*.seed
+*.bak
+
+# Archivos de credenciales / secretos
+*.json
+*.pem
+*.key
+*.crt
+*.der
+
+# Evitar subir credenciales específicas de GCP o tu proyecto
+docker_debezium_postgresql/credenciales.json
+docker_debezium_postgresql/offsets/
+
+# Notebooks (checkpoints y salidas)
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Otros temporales
+*.tmp
+*.swp
+*.swo
